@@ -1,0 +1,11 @@
+docker run -it ubuntu
+this command help to create container which have ubuntu operating system in it
+hub.docker.com help to create container, and this is like github, it has all public container if you already have ubuntu img then it reuses
+This container have particular id and it is isolated, imgs are operating systems, container needs imgs i.e os
+img act as os and containers helps to run imgs  
+containers cannot communicate with each other they are isolated, until and unless our wish
+
+ctrl + d = stop container
+
+we can make custom imgs,  that will have their own dependencies
+these imgs can deploy on public platforms so any one can run this img in their local containers
