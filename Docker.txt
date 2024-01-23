@@ -9,3 +9,27 @@ ctrl + d = stop container
 
 we can make custom imgs,  that will have their own dependencies
 these imgs can deploy on public platforms so any one can run this img in their local containers
+
+
+docker container ls
+it gives list of container which are running, this command works when your containers are running
+
+docker container ls -a 
+it gives list of all containers which are stooped and which are working
+
+docker start container name = to start 
+
+docker start container name = to start
+
+docker 
+how to go inside of container 
+docker exec -it container_name command
+
+-it = interactive tdy, it hepls to connect terminal to docker terminal so that you can perform commands in container
+
+for eg. 
+docker exec -it container_name bash
+
+to see the imgs we can do
+docker images
+docker images ls
