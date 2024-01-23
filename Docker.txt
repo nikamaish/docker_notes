@@ -33,3 +33,5 @@ docker exec -it container_name bash
 to see the imgs we can do
 docker images
 docker images ls
+
+there are lots of imgs, we can explore that through docker.hub.com
