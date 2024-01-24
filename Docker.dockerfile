@@ -79,3 +79,6 @@ FROM ubuntu:latest
 #9000 = container port
 
 
+#In Docker, the ENV instruction is used to set environment variables in the image. Environment variables are key-value pairs that can be accessed by processes running inside the container. They are often used to configure applications or provide runtime information.
+
+#ENV key=value
