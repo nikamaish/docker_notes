@@ -1,4 +1,4 @@
-#*** Running ubuntu image in container ***
+                        #*** Running ubuntu image in container ***
 
 FROM ubuntu:latest
 
@@ -8,7 +8,9 @@ FROM ubuntu:latest
 
 
 
-#*** Understanding imgaes vs containers ***
+
+
+                        #*** Understanding imgaes vs containers ***
 
 #This container have particular id and it is isolated, imgs are operating systems, container needs imgs i.e os
 #img act as os and containers helps to run imgs  
@@ -54,7 +56,9 @@ FROM ubuntu:latest
 
 
 
-#*** Port Mapping ***
+
+
+                                        #*** Port Mapping ***
 
 #MailHog:-
 #MailHog is a tool used for email testing during development. In the context of Docker, MailHog can be run as a Docker container to capture and display emails sent by your application during testing or development. mailhog is img that can be used to send the mails
@@ -65,6 +69,12 @@ FROM ubuntu:latest
 #within each container there will be a port and that port need to expose 
 
 #mailhog will run on 1025 port 
+# -p 1025:1025: This maps port 1025 on the host machine to port 1025 inside the MailHog container. Port 1025 is commonly used for receiving mail in development environments.
+# -p 8025:8025: This maps port 8025 on the host machine to port 8025 inside the MailHog container. Port 8025 is used for the MailHog web interface, allowing you to view and interact with the emails sent to MailHog.
+
+# So, these two mappings allow you to access the SMTP server of MailHog on port 1025 and the web interface on port 8025 from your host machine. 
+
+
 
 #piyushgargdev/mynodeapp this is an img and need to pull
 #docker run -it piyushgargdev/mynodeapp
@@ -75,10 +85,16 @@ FROM ubuntu:latest
 #6000 = local machine port
 #we can change it
 
-
 #9000 = container port
 
 
-#In Docker, the ENV instruction is used to set environment variables in the image. Environment variables are key-value pairs that can be accessed by processes running inside the container. They are often used to configure applications or provide runtime information.
+
+                                # *** ENVIRONMENT VARIABLES ***
+
+#In Docker, the ENV instruction is used to set environment variables in the image. Environment variables are key-value pairs that can be accessed by processes running inside the container. They are often used to configure applications or provide runtime information. If you want to give extra information to the container then we can use env variables, env are safe and secure
 
 #ENV key=value
+
+
+# COMMAND
+# docker run -it -e key = value img name
