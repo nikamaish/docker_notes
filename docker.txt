@@ -119,3 +119,8 @@ docker exec -it container_id bash
 docker run -it notes-nodejs
 
 when I usually do port mapping then we do in local terminal not inside of container, bcz I found that command tough 
+
+
+command to push your img to docker hub.com
+docker push img name
+for that you need to login docker in local machine
