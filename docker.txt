@@ -99,12 +99,17 @@ FROM ubuntu:latest
 # COMMAND
 # docker run -it -e key = value img name
 
+docker run -it -e PORT=4000 -p 4000:3000 notes-nodejs
+
+
+
 
 1) need to start container
 >docker start 1stDNodejs
 
 2)go inside of container
 docker exec -it 1stDNodejs bash
+docker run -it 1stDNodejs 
 
 another way to go inside of container
 docker exec -it container_id bash
@@ -112,3 +117,5 @@ docker exec -it container_id bash
 
 3)run image
 docker run -it notes-nodejs
+
+when I usually do port mapping then we do in local terminal not inside of container, bcz I found that command tough 
