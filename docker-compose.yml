@@ -1,0 +1,27 @@
+# compose use to run multiple containers at once, but how they communicate with each other? they use network
+# docker compose create a network for us and connect all containers to that network
+# docker compose file is a yaml file, it has a version, services, volumes, networks, etc
+# docker compose file is a blueprint of our application, it has all the configuration we need to run our application
+
+version: '3.8'
+
+services:
+  postgres: #service name, and it can name anything 
+    image: mongo #image name
+    ports:
+      - "8081:8081" 
+      #host:container, expose port 5432 on host machine and map it to port 5432 on container
+    environment:
+    mongo_user: mongoadmin
+    # mongo_user means the user name we want to create in the database, and mongoadmin is the user name
+    mongo_password: password
+    # mongo_password means the password we want to create in the database, and password is the password
+    mongo_db: review
+    # mongo_db means the database name we want to create in the database, and review is the database name
+    
+
+
+  redis:
+    image: redis #image name
+    ports:
+      - "6379:6379"
