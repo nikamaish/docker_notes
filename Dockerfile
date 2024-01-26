@@ -33,3 +33,6 @@ RUN npm install
 
 ENTRYPOINT [ "node",    "index.js" ]
 # above is a command that tells docker what to run when the container starts
+
+
+# i want to create a container, give a command to run, and then stop the container

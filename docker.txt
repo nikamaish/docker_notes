@@ -98,3 +98,17 @@ FROM ubuntu:latest
 
 # COMMAND
 # docker run -it -e key = value img name
+
+
+1) need to start container
+>docker start 1stDNodejs
+
+2)go inside of container
+docker exec -it 1stDNodejs bash
+
+another way to go inside of container
+docker exec -it container_id bash
+
+
+3)run image
+docker run -it notes-nodejs
