@@ -169,3 +169,38 @@ services:
     image: my_image
     volumes:
       - my_volume:/path/in/container
+
+
+
+
+                        Docker Multistage Builds
+
+
+
+Docker multistage builds are a feature that allows you to create more efficient Docker images by using multiple build stages within a single Dockerfile. Each stage in the build produces an intermediate image, and only the final stage contains the necessary artifacts to run the application. This helps to minimize the size of the final Docker image and reduces the attack surface by excluding unnecessary build dependencies.
+
+
+# Stage 1: Build stage
+FROM node:14 as builder
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+# Stage 2: Final stage
+FROM nginx:alpine
+
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+
+
+Multistage builds are particularly useful for languages and frameworks that require additional build tools but do not need them at runtime. They are commonly used in scenarios where a build process generates artifacts that can be included in a smaller runtime image.
