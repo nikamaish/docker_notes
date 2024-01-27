@@ -32,6 +32,8 @@ services:
     ports:
       - "6379:6379"
 
+# docker compose down, to stop all containers
+# docker compose up -d, to run all containers in the background
 
       
 

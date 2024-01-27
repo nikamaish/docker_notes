@@ -124,3 +124,17 @@ when I usually do port mapping then we do in local terminal not inside of contai
 command to push your img to docker hub.com
 docker push img name
 for that you need to login docker in local machine
+
+
+Docker networking is a crucial aspect of managing containers in a Docker environment. Docker provides various networking options to facilitate communication between containers, as well as between containers and the external network.
+
+By default, Docker uses a bridge network that allows containers to communicate with each other on the same host. Containers connected to the same bridge network can reach each other using their container names or IP addresses.
+
+# Example: Create a bridge network
+docker network create my_bridge_network
+
+
+Host Network: Using the host network mode allows a container to share the network namespace with the Docker host. This means the container has the same network interfaces as the host, effectively bypassing the Docker network isolation.
+
+# Example: Run a container with host network mode
+docker run --network host my_container
