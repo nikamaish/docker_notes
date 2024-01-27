@@ -138,3 +138,34 @@ Host Network: Using the host network mode allows a container to share the networ
 
 # Example: Run a container with host network mode
 docker run --network host my_container
+
+
+                                    Volume Mounting
+
+
+Volume mounting in Docker refers to the process of attaching a data volume from the host machine or another container to a specific path within a container. This allows data to persist beyond the lifecycle of a container and facilitates data sharing between containers.
+
+Creating a Volume:
+You can create a named volume using the docker volume create command:
+# Example: Create a named volume
+docker volume create my_volume
+
+
+Mounting a Volume in a Container:
+You can mount a volume when running a container using the -v or --volume option:
+# Example: Run a container and mount a volume
+docker run -v my_volume:/path/in/container my_image
+
+
+Mounting Host Paths:
+Instead of creating a named volume, you can also mount a path from the host machine directly into the container:
+# Example: Mount a host path into the container
+docker run -v /host/path:/path/in/container my_image
+
+
+version: '3'
+services:
+  my_service:
+    image: my_image
+    volumes:
+      - my_volume:/path/in/container
