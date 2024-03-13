@@ -1,6 +1,4 @@
-                        #*** Running ubuntu image in container ***
-
-
+                      
 Docker allows you to containerize applications, which means you can package an application and its dependencies into a single, lightweight container. This containerization provides consistency across different environments and simplifies the deployment process.
 
 With Docker, you can deploy multiple containers, each running a different application, on a single server. Containers share the host operating system's kernel but run in isolated environments, which makes them portable and efficient. Each container encapsulates the application and its dependencies, ensuring that it runs consistently across different environments.
@@ -11,11 +9,13 @@ In the context of Docker containers, the "host machine" refers to the physical o
 The host machine provides the resources (CPU, memory, disk space, etc.) required for running containers. Docker containers share these resources efficiently, thanks to the lightweight nature of containerization.
 
 
+Docker uses container runtimes to execute containers. On Linux, the default container runtime is typically provided by containerd or Docker's own container runtime. On Windows, the container runtime is integrated with the Windows operating system.
+
 
 The Docker software, known as the Docker Engine, is installed on the host machine. The Docker Engine is responsible for managing and running containers. It interacts with the host operating system's kernel to create and manage isolated containerized environments.
 
 
-
+                        #*** Running ubuntu image in container ***
 
 
 FROM ubuntu:latest
