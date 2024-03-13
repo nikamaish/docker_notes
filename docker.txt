@@ -1,12 +1,28 @@
                         #*** Running ubuntu image in container ***
 
+
+Docker allows you to containerize applications, which means you can package an application and its dependencies into a single, lightweight container. This containerization provides consistency across different environments and simplifies the deployment process.
+
+With Docker, you can deploy multiple containers, each running a different application, on a single server. Containers share the host operating system's kernel but run in isolated environments, which makes them portable and efficient. Each container encapsulates the application and its dependencies, ensuring that it runs consistently across different environments.
+
+In the context of Docker containers, the "host machine" refers to the physical or virtual machine on which the Docker software is installed and where the containers are executed. The host machine provides the underlying infrastructure and resources necessary for running Docker containers.
+
+
+The host machine provides the resources (CPU, memory, disk space, etc.) required for running containers. Docker containers share these resources efficiently, thanks to the lightweight nature of containerization.
+
+
+
+The Docker software, known as the Docker Engine, is installed on the host machine. The Docker Engine is responsible for managing and running containers. It interacts with the host operating system's kernel to create and manage isolated containerized environments.
+
+
+
+
+
 FROM ubuntu:latest
 
 #docker run -it ubuntu
 #this command help to create container which have ubuntu operating system in it
 #hub.docker.com help to create container, and this is like github, it has all public container if you already have ubuntu img then it reuses
-
-
 
 
 
@@ -124,6 +140,9 @@ when I usually do port mapping then we do in local terminal not inside of contai
 command to push your img to docker hub.com
 docker push img name
 for that you need to login docker in local machine
+
+
+                            networking
 
 
 Docker networking is a crucial aspect of managing containers in a Docker environment. Docker provides various networking options to facilitate communication between containers, as well as between containers and the external network.
